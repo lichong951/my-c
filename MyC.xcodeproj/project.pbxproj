@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FAF200291F44374700875B23 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF200281F44374700875B23 /* main.cpp */; };
+		FAF200311F44378A00875B23 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAF2002F1F44378A00875B23 /* md5.cpp */; };
+		FAF200381F457C1500875B23 /* md5.h in Sources */ = {isa = PBXBuildFile; fileRef = FAF200301F44378A00875B23 /* md5.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		FAF200251F44374700875B23 /* MyC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyC; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF200281F44374700875B23 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FAF2002F1F44378A00875B23 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		FAF200301F44378A00875B23 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		FAF200351F457BE900875B23 /* conf-en-decrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "conf-en-decrypt.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,9 @@
 		FAF200271F44374700875B23 /* MyC */ = {
 			isa = PBXGroup;
 			children = (
+				FAF200351F457BE900875B23 /* conf-en-decrypt.cpp */,
+				FAF2002F1F44378A00875B23 /* md5.cpp */,
+				FAF200301F44378A00875B23 /* md5.h */,
 				FAF200281F44374700875B23 /* main.cpp */,
 			);
 			path = MyC;
@@ -119,6 +127,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF200381F457C1500875B23 /* md5.h in Sources */,
+				FAF200311F44378A00875B23 /* md5.cpp in Sources */,
 				FAF200291F44374700875B23 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +228,11 @@
 		FAF2002D1F44374700875B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "${SRCROOT}/MyC/ssl/include/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyC/ssl/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,6 +240,11 @@
 		FAF2002E1F44374700875B23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "${SRCROOT}/MyC/ssl/include/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyC/ssl/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -248,6 +268,7 @@
 				FAF2002E1F44374700875B23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
